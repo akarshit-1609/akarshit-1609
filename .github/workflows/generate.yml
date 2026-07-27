@@ -1,0 +1,84 @@
+name: Graph Contributions
+
+on:
+  push:
+    branches: [main]
+
+  workflow_dispatch:
+
+  schedule:
+    - cron: "0 */12 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v6
+      
+      - name: Generate github contributions graph
+        uses: akarshit-1609/dynamic-colors-blinking-graph@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          username: ${{ github.repository_owner }}
+          light_svg_filename: dist/graph_light.svg
+          dark_svg_filename: dist/graph_dark.svg
+
+      - name: Generate stats card (light)
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          options: username=${{ github.repository_owner }}&show_icons=true&bg_color=ffffff&title_color=0000ff&text_color=000000&icon_color=e63702&border_color=000000&border_radius=20
+          path: dist/stats_light.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate stats (dark)
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          options: username=${{ github.repository_owner }}&show_icons=true&bg_color=0d1117&title_color=00ff00&text_color=ffffff&icon_color=ffff00&border_color=ffffff&border_radius=20
+          path: dist/stats_dark.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate top languages card (light)
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          options: username=${{ github.repository_owner }}&layout=compact&langs_count=6&bg_color=ffffff&title_color=0000ff&text_color=000000&icon_color=e63702&border_color=000000&card_width=500&border_radius=20
+          path: dist/top_langs_light.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate top languages card (dark)
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          options: username=${{ github.repository_owner }}&layout=compact&langs_count=6&bg_color=0d1117&title_color=00ff00&text_color=ffffff&icon_color=ffff00&border_color=ffffff&card_width=500&border_radius=20
+          path: dist/top_langs_dark.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate streak card (light)
+        uses: DenverCoder1/github-readme-streak-stats@main
+        with:
+          options: user=${{ github.repository_owner }}&background=ffffff&border=000000&stroke=9c8f02&ring=2d9600&fire=0000ff&currStreakLabel=cc028c&currStreakNum=e63702&sideLabels=000000&sideNums=e63702&dates=000000&excludeDaysLabel=000000&border_radius=20
+          path: dist/streak_light.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate streak card (dark)
+        uses: DenverCoder1/github-readme-streak-stats@main
+        with:
+          options: user=${{ github.repository_owner }}&background=0d1117&border=ffffff&stroke=ff00ea&ring=00ff00&fire=ffff00&currStreakLabel=ff4400&currStreakNum=00fff2&sideLabels=ffffff&sideNums=00fff2&dates=ffffff&excludeDaysLabel=ffffff&border_radius=20
+          path: dist/streak_dark.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+
+
+      - name: Deploy GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: output
+          publish_dir: ./dist
+          keep_files: true
