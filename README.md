@@ -190,10 +190,12 @@ Passionate about creating real-world applications, AI-powered tools, desktop sof
 
 <p align="center">
   <a href="https://akarshit-1609.github.io/" target="_blank">
-    <img src="https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=googlechrome&logoColor=white" />
+    <img src="https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=googlechrome&logoColor=white" width="125" height="35" />
   </a>
+</p>
+<p align="center">
   <a href="https://www.linkedin.com/in/akarshitk/" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" width="125" height="35" />
   </a>
 </p>
 
