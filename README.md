@@ -4,9 +4,19 @@
 
 <h1 align="center">Hi <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="35"> I'm Akarshit kumar</h1>
 
-<p align="center">
-    <img src="header_img.svg" />
-</p>
+<div align="center">
+<picture>
+  <source
+    media="(prefers-color-scheme: dark)"
+    srcset="header_img-dark.svg">
+
+  <source
+    media="(prefers-color-scheme: light)"
+    srcset="header_img-light.svg">
+
+  <img alt="GitHub Profile Graph" src="header_img-light.svg">
+</picture>
+</div>
 
 Passionate about creating real-world applications, AI-powered tools, desktop software, and games. I enjoy learning new technologies and turning ideas into practical solutions.
 
