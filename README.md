@@ -8,13 +8,13 @@
 <picture>
   <source
     media="(prefers-color-scheme: dark)"
-    srcset="header_img-dark.svg">
+    srcset="assets/header_img-dark.svg">
 
   <source
     media="(prefers-color-scheme: light)"
-    srcset="header_img-light.svg">
+    srcset="assets/header_img-light.svg">
 
-  <img alt="GitHub Profile Graph" src="header_img-light.svg">
+  <img alt="GitHub Profile Graph" src="assets/header_img-light.svg">
 </picture>
 </div>
 
