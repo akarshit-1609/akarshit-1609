@@ -58,7 +58,7 @@ Passionate about creating real-world applications, AI-powered tools, desktop sof
 ## 🛠️ Languages & Tools
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,html,css,js,ts,nodejs,express,fastapi,php,mysql,postgres,mongodb,sqlite,java,kotlin,c,cpp,bash,linux,docker,git,github,gradle,androidstudio,vim,vscode,arduino,raspberrypi,redis,nginx,regex,powershell&perline=8" />
+  <img src="assets/skill-icons.svg" />
 </p>
 
 ### 🔧 AI & Machine Learning
