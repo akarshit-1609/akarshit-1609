@@ -135,12 +135,12 @@ Passionate about creating real-world applications, AI-powered tools, desktop sof
 ## 🤝 Connect With Me
 
 <p align="center">
-  <a href="https://akarshit-1609.github.io/" target="_blank">
-    <img src="https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=googlechrome&logoColor=white" width="125" height="35" />
-  </a>
-
   <a href="https://www.linkedin.com/in/akarshitk/" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" width="125" height="35" />
+  </a>
+
+  <a href="https://leetcode.com/u/akarshitk/" target="_blank">
+    <img src="https://img.shields.io/badge/LeetCode-%23FFA116.svg?style=for-the-badge&logo=leetcode&logoColor=black" width="125" height="35" />
   </a>
 </p>
 
