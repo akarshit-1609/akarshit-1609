@@ -18,6 +18,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v6
+
+      - name: Create dist directory
+        run: mkdir -p dist
       
       - name: Generate github contributions graph
         uses: akarshit-1609/dynamic-colors-blinking-graph@v1
@@ -73,6 +76,11 @@ jobs:
           path: dist/streak_dark.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Download leetcode stats card (light)
+        run: curl -L -o dist/leetcode-stats-light.svg 'https://leetcard.jacoblin.cool/akarshitk?theme=unicorn&font=Gilda%20Display&ext=heatmap'
+
+      - name: Download leetcode stats card (dark)
+        run: curl -L -o dist/leetcode-stats-dark.svg 'https://leetcard.jacoblin.cool/akarshitk?theme=dark&font=Gilda%20Display&colors=%23101010%2C%23404040%2C%23f0f0f0%2C%23dcdcdc%2C%2300d9ff%2C%235cb85c%2C%23f0ad4e%2C%23d9534f&ext=heatmap'
 
 
       - name: Deploy GitHub Pages
