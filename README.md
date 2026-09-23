@@ -132,6 +132,23 @@ Passionate about creating real-world applications, AI-powered tools, desktop sof
 
 ---
 
+## 📖 Leetcode Stats
+<div align="center">
+<picture>
+  <source
+    media="(prefers-color-scheme: dark)"
+    srcset="https://raw.githubusercontent.com/akarshit-1609/akarshit-1609/refs/heads/output/leetcode-stats-dark.svg">
+
+  <source
+    media="(prefers-color-scheme: light)"
+    srcset="https://raw.githubusercontent.com/akarshit-1609/akarshit-1609/refs/heads/output/leetcode-stats-light.svg">
+
+  <img alt="GitHub Profile Graph" src="https://raw.githubusercontent.com/akarshit-1609/akarshit-1609/refs/heads/output/leetcode-stats-light.svg">
+</picture>
+</div>
+
+---
+
 ## 🤝 Connect With Me
 
 <p align="center">
