@@ -1,4 +1,4 @@
-name: Graph Contributions
+name: Generate Stats and Graph Contributions
 
 on:
   push:
